@@ -2,6 +2,8 @@
 
 A responsive bookmark manager landing page built with Tailwind CSS.
 
+🔗 **Live Demo:** https://bookmark-manager-website-project.vercel.app/
+
 ## Getting Started
 
 ```bash
