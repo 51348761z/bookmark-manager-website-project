@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1020px;
+  --breakpoint-xl: 1440px;
+
+  --color-soft-blue: hsl(231, 69%, 60%);
+  --color-soft-red: hsl(0, 94%, 66%);
+  --color-grayish-blue: hsl(229, 8%, 60%);
+  --color-dark-blue: hsl(229, 31%, 21%);
+
+  --font-sans: Rubik, sans-serif;
+
+  --bg-dots: url("../images/bg-dots.svg");
+}
+
+@media (min-width: 1020px) {
+  .bg-hero {
+    width: 2000px;
+    height: 300px;
+    left: 30%;
+    @apply bg-soft-blue absolute top-52 rounded-l-full;
+  }
+
+  .bg-hero-reverse {
+    width: 2000px;
+    height: 300px;
+    right: 60%;
+    @apply bg-soft-blue absolute top-52 rounded-r-full;
+  }
+}
+
+.ficon:hover {
+  filter: invert(39%) sepia(83%) saturate(7493%) hue-rotate(203deg)
+    brightness(95%) contrast(101%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  top: 0;
+  left: 0;
+  background-color: black;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+  position: fixed;
+  top: 3rem;
+  right: 4rem;
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+  background-color: white;
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  background-color: white;
+}
